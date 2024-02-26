@@ -24,7 +24,7 @@ def process_pdf_file(file):
         for blo in blocks:
             for block in blo['lines']:
                 # Check if the current block contains "Fold Here"
-                if "Fold Here" in block['spans'][0]["text"]:
+                if "TAX INVOICE" in block['spans'][0]["text"]:
                     block['spans'][0]["text"] = blocks[-1]["lines"][-1]["spans"][0]["text"]
                     # Extract the bounding box coordinates for the current block
                     bbox = block['spans'][0]["bbox"]
